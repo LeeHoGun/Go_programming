@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 )
 
 func main() {
-	dice := rand.Intn(6) + 1
-	fmt.Println(dice)
+	fmt.Print("Guess number game!")
+	answer := rand.intn(100) + 1 // 1 ~ 100
+	fmt.Println(answer)
 }
