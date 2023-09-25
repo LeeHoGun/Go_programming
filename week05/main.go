@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main() {
@@ -14,10 +16,16 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(inputScore)
-	if inputScore >= 90 {
-		grade := "A grade!"
-	} else {
-		grade := "under A grade..."
+	inputScoreString = strings.TrimSpace(inputScoreString)
+	inputScore, err := strconv.ParseFloat(inputScoreString, 32)
+	if err != nil {
+		log.Fatal(err)
 	}
+	var grade string
+	if inputScore >= 90 {
+		grade = "A grade!"
+	} else {
+		grade = "under A grade..."
+	}
+	fmt.Println("You got", grade)
 }
