@@ -19,8 +19,14 @@ func main() {
 	}
 
 	test := [3]string{"inha", "go", "student"}
-	testS := test[:2] // testS := test[0:2]
+	testS := test[:2]  // testS := test[0:2]
+	testS2 := test[1:] // index 1부터 끝까지
+
+	testS2[0] = "python"
+	// test[1] = "python"
+	// testS[-2] = "python"
+
 	fmt.Println(test, len(test))
 	fmt.Println(testS, len(testS))
-
+	fmt.Println(testS2, len(testS2))
 }
