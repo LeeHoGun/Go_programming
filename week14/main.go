@@ -19,4 +19,9 @@ func main() {
 	for _, v := range games {
 		fmt.Println(v)
 	}
+	// update
+	games[101] = "장덕수"
+	for k, v := range games {
+		fmt.Println(k, v)
+	}
 }
